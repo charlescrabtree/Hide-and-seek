@@ -24,21 +24,21 @@ function getRandomItem(arr) {
 }
 
 shedButton.addEventListener('click', () => {
-    const hidingSpot = Math.floor(Math.random() * 3);
-    const answer = hidingPlaces[hidingSpot];
-    handleGuess(answer, 'shed');
+    const correctSpot = getRandomItem(hidingPlaces);
+
+    handleGuess(correctSpot, 'shed');
 });
 
 treeButton.addEventListener('click', () => {
-    const hidingSpot = Math.floor(Math.random() * 3);
-    const answer = hidingPlaces[hidingSpot];
-    handleGuess(answer, 'tree');
+    const correctSpot = getRandomItem(hidingPlaces);
+
+    handleGuess(correctSpot, 'tree');
 });
 
 boulderButton.addEventListener('click', () => {
-    const hidingSpot = Math.floor(Math.random() * 3);
-    const answer = hidingPlaces[hidingSpot];
-    handleGuess(answer, 'boulder');
+    const correctSpot = getRandomItem(hidingPlaces);
+
+    handleGuess(correctSpot, 'boulder');
 });
 
 
