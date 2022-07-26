@@ -10,7 +10,7 @@ const boulderContainer = document.getElementById('boulder-container');
 const totalEl = document.getElementById('total');
 const lossesEl = document.getElementById('losses');
 const winsEl = document.getElementById('wins');
-
+const resetEl = document.getElementByID('reset');
 // initialize state
 const hidingPlaces = ['tree', 'shed', 'boulder'];
 
@@ -40,6 +40,13 @@ boulderButton.addEventListener('click', () => {
 
     handleGuess(correctSpot, 'boulder');
 });
+
+resetButton.addEventListener('click', () => {
+    
+})
+document.getElementById("reset").onclick = function() {
+    document.getElementById("number").value = "";
+};
 
 
 function handleGuess(correctSpot, userGuess) {
