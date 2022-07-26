@@ -2,6 +2,7 @@
 const shedButton = document.getElementById('shed-button');
 const treeButton = document.getElementById('tree-button');
 const boulderButton = document.getElementById('boulder-button');
+const resetButton = document.getElementById('reset-button');
 
 const shedContainer = document.getElementById('shed-container');
 const treeContainer = document.getElementById('tree-container');
@@ -10,7 +11,7 @@ const boulderContainer = document.getElementById('boulder-container');
 const totalEl = document.getElementById('total');
 const lossesEl = document.getElementById('losses');
 const winsEl = document.getElementById('wins');
-const resetEl = document.getElementByID('reset');
+
 // initialize state
 const hidingPlaces = ['tree', 'shed', 'boulder'];
 
@@ -42,11 +43,20 @@ boulderButton.addEventListener('click', () => {
 });
 
 resetButton.addEventListener('click', () => {
-    
-})
-document.getElementById("reset").onclick = function() {
-    document.getElementById("number").value = "";
-};
+    totalGuesses = 0;
+    correctGuesses = 0;
+    resetStyles();
+    totalEl.textContent = totalGuesses;
+    winsEl.textContent = correctGuesses;
+    lossesEl.textContent = totalGuesses - correctGuesses;
+}
+);
+
+
+
+//function resetButton =
+//document.getElementById("reset").onclick = function() {
+    //document.getElementById("number").value = "";};
 
 
 function handleGuess(correctSpot, userGuess) {
